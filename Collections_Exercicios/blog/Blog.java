@@ -1,5 +1,3 @@
-package Collections_Exercicios.blog;
-
 import java.util.*;
 
 public class Blog {

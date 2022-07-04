@@ -1,5 +1,3 @@
-package Collections_Exercicios.blog;
-
 public class Post {
     private String autor;
     private String titulo;
