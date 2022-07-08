@@ -1,3 +1,3 @@
-public class CanalNotificacao {
-    
+public Interface CanalNotificacao {
+    public void notificar(Mensagem mensagem);
 }
