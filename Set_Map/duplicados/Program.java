@@ -1,7 +1,7 @@
 import java.util.TreeSet;
 
-public class Program {
-    public static void main(String[] args) {
+//public class Program {
+   // public static void main(String[] args) {
         TreeSet<Integer> duplicados1 = NumerosDuplicados.buscar(new int[] {1, 2, 3, 1, 3, 2, 5, 8, 9, 6, 7, 6, 1, 2});
         TreeSet<Integer> duplicados2 = NumerosDuplicados.buscar(new int[] {6, 17, 19, 11, 4, 18, 5, 20, 22, 5, 1, 19, 25, 14, 7, 8, 18, 16, 1, 12, 4, 18, 15, 27, 2, 24, 6, 23, 3, 2});
         TreeSet<Integer> duplicados3 = NumerosDuplicados.buscar(new int[] {9, 15, 6, 11, 1, 14, 16, 9, 5, 4, 16, 13, 9, 17, 5, 7, 16, 3, 7, 15});
