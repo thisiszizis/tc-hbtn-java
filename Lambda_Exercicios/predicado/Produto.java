@@ -37,8 +37,8 @@ public class Produto {
     public String toString() {
         return "Produto{" +
                 "nome= '%s" + nome + '\'' +
-                ", preco= %6f" + preco +
-                ", peso= %6f" + peso +
+                ", preco= %,6f" + preco +
+                ", peso= %,6f" + peso +
                 ", quantidadeEmEstoque= %d" + quantidadeEmEstoque +
                 ", tipo= %s" + tipo +
                 '}';
