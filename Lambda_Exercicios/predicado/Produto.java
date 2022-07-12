@@ -1,7 +1,4 @@
-import java.text.NumberFormat;
-
 public class Produto {
-
     private String nome;
     private double preco;
     private double peso;
@@ -38,6 +35,6 @@ public class Produto {
 
     @Override
     public String toString() {
-        return String.format("%s %6f %6f %d %s", nome, preco, peso, quantidadeEmEstoque, tipo);
+        return String.format("%s %.6f %.6f %d %s", nome, preco, peso, quantidadeEmEstoque, tipo);
     }
 }
