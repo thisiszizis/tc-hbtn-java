@@ -1,5 +1,3 @@
-import java.util.Locale;
-
 public class Produto {
     private String nome;
     private double preco;
@@ -34,9 +32,6 @@ public class Produto {
     public TiposProduto getTipo() {
         return tipo;
     }
-
-    Locale l = new Locale("pt","BR");
-    NumberFormat nf = NumberFormat.getInstance(l);
 
     @Override
     public String toString() {
