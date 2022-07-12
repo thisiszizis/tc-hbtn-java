@@ -1,41 +1,41 @@
-import java.util.*;
-import java.util.function.*;
+public class Produto {
 
-public class Program {
-    public static void main(String[] args) {
-        Produto produto1 = new Produto("Cafe Chocolate Trufado Baggio",
-                21.99, 250, 120, TiposProduto.COZINHA);
+    private String nome;
+    private double preco;
+    private double peso;
+    private int quantidadeEmEstoque;
+    private TiposProduto tipo;
 
-        Produto produto2 = new Produto("Leite Condensado Moca",
-                6.29, 395, 200, TiposProduto.COZINHA);
+    public Produto(String nome, double preco, double peso, int quantidadeEmEstoque, TiposProduto tipo) {
+        this.nome = nome;
+        this.preco = preco;
+        this.peso = peso;
+        this.quantidadeEmEstoque = quantidadeEmEstoque;
+        this.tipo = tipo;
+    }
 
-        Produto produto3 = new Produto("Carro Vortex",
-                799.90, 1560, 5, TiposProduto.BRINQUEDO);
+    public String getNome() {
+        return nome;
+    }
 
-        Produto produto4 = new Produto("Smart TV LED 32 HD LG",
-                1452.55, 6300, 7, TiposProduto.ELETRONICO);
+    public double getPreco() {
+        return preco;
+    }
 
-        Produto produto5 = new Produto("Nintendo Switch",
-                2990.00, 1700, 12, TiposProduto.ELETRONICO);
+    public double getPeso() {
+        return peso;
+    }
 
-        List<Produto> produtos = Arrays.asList(
-                produto1, produto2, produto3, produto4, produto5);
+    public int getQuantidadeEmEstoque() {
+        return quantidadeEmEstoque;
+    }
 
-        List<Produto> produtosPrecoMaiorQue100 = ConsultaProdutos.filtrar(produtos,
-                p -> p.getPreco() > 100);
+    public TiposProduto getTipo() {
+        return tipo;
+    }
 
-        List<Produto> produtosPesoMenorOuIgual1600 = ConsultaProdutos.filtrar(produtos,
-                p -> p.getPeso() <= 1600);
-
-        List<Produto> produtosCozinha = ConsultaProdutos.filtrar(produtos,
-                p -> p.getTipo() == TiposProduto.COZINHA);
-
-        List<Produto> produtosBaixoEstoque = ConsultaProdutos.filtrar(produtos,
-                p -> p.getQuantidadeEmEstoque() <= 10);
-
-        System.out.println(produtosPrecoMaiorQue100);
-        System.out.println(produtosPesoMenorOuIgual1600);
-        System.out.println(produtosCozinha);
-        System.out.println(produtosBaixoEstoque);
+    @Override
+    public String toString() {
+        return String.format("%s %.6f %.6f %d %s", nome, preco, peso, quantidadeEmEstoque, tipo);
     }
 }
