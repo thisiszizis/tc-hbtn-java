@@ -33,9 +33,9 @@ public class Produto {
     public TiposProduto getTipo() {
         return tipo;
     }
-    
+
     @Override
     public String toString() {
-        return String.format("%s %.6f %.6f %d %s", nome, preco, peso, quantidadeEmEstoque, tipo);
+        return String.format("[%d] %s %s R$ %.2f", getCodigo(), getNome(), getCategoria(), getPreco() );
     }
 }
